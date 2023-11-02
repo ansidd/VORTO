@@ -26,7 +26,8 @@ def read_data(file):
 
     jobs = {}
     new_points = []
-    for i, point in enumerate(points):
+    for i in range(1, len(points)+1):
+        point = points[i-1]
         jobs[i] = Job(i, point[0], point[1])
         new_points.append([point[0],'source',i])
         new_points.append([point[1],'target',i])
